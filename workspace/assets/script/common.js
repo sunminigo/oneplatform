@@ -15,15 +15,32 @@ sideMenu = function () {
 };
 
 slider = function () {
-	$('#visual_slider').slick({
-		lazyLoad: 'ondemand',
-		dots: true,
-		draggable: true,
-		arrows: false,
-		adaptiveHeight: true,
-		centerMode: true,
-		centerPadding: '66px',
-	});
+	$('#visual_slider')
+		.slick({
+			lazyLoad: 'ondemand',
+			// autoplay: true,
+			// autoplaySpeed: 3000,
+			infinite: true,
+			dots: true,
+			draggable: true,
+			arrows: false,
+			adaptiveHeight: true,
+			centerMode: true,
+			centerPadding: '66px',
+		})
+		.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+			if (currentSlide !== nextSlide) {
+				$('.slick-center + .slick-cloned').each(function (index, node) {
+					console.log(node);
+					var $node = $(node);
+
+					setTimeout(function () {
+						$node.addClass('slick-current');
+						$node.addClass('slick-center');
+					});
+				});
+			}
+		});
 };
 
 tabBox = function () {
