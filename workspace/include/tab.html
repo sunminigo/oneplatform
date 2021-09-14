@@ -1,0 +1,23 @@
+<div class="tab_box">
+  <div class="tab_menu">
+    <ul>
+      @@for (var i=0; i<tabMenu.length; i++) {
+        <li>`+tabMenu[i]+`</li>
+      }
+    </ul>
+  </div>
+	<div class="tab_content">
+    @@for (var j=0; j<tabCont.length; j++) {
+      <div>
+      @@for (var jj=0; jj<tabCont[j].content.length; jj++) {
+        <!-- <div class="item">
+          
+          <div class="thumbnail">
+            <img src="`+tabCont[j].content[jj].img+`" alt="`+tabCont[j].content[jj].text+`" class="img" />
+          </div><br>`+tabCont[j].content[jj].text+`
+        </div> -->
+      }
+      </div>
+    }
+	</div>
+</div>

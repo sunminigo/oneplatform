@@ -1,0 +1,101 @@
+/*---------------------------
+	RESET
+---------------------------*/
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	font-family: 'NanumSquare', sans-serif;
+	font-weight: 400;
+	color: $default;
+	@include vendorPrefix(box-sizing, border-box);
+}
+
+html,
+body {
+	position: relative;
+	// max-width: 720px;
+	height: 100%;
+	margin: 0 auto;
+	font-size: 16px;
+}
+@media screen and (max-width: 640px) {
+	html,
+	body {
+		font-size: 13px;
+	}
+}
+@media screen and (max-width: 480px) {
+	html,
+	body {
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 360px) {
+	html,
+	body {
+		font-size: 8px;
+	}
+}
+
+html.scrollLock {
+	height: 100%;
+	overflow: hidden;
+}
+
+section,
+aside,
+article,
+fieldset,
+figure,
+figcaption {
+	display: block;
+}
+
+a:link,
+a:focus,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+a {
+	color: $darkGrey2;
+}
+
+button,
+img {
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+	cursor: pointer;
+}
+button {
+	background: transparent;
+	border: none;
+}
+
+img,
+i {
+	vertical-align: text-bottom;
+}
+i {
+	font-size: inherit;
+	opacity: 0.5;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+}
+
+.hand {
+	cursor: pointer;
+}
