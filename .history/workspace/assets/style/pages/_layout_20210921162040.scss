@@ -1,0 +1,266 @@
+/*-----------------
+	header
+------------------*/
+.header_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+
+	.btn_menu {
+		font-size: 3.75rem;
+	}
+	.logo {
+		width: 18.75rem;
+
+		img {
+			vertical-align: top;
+		}
+	}
+	.btn_search {
+		font-size: 3.75rem;
+	}
+}
+
+/*-----------------
+	side menu
+------------------*/
+.side_menu {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	-webkit-transition: all ease 1s 0s;
+	-moz-transition: all ease 1s 0s;
+	-ms-transition: all ease 1s 0s;
+	-o-transition: all ease 1s 0s;
+	transition: all ease 1s 0s;
+
+	&.active {
+		left: 0;
+		animation: backgroundColor 1s 1s both alternate;
+		-webkit-animation: backgroundColor 1s 1s both alternate;
+	}
+	.side_bg {
+		width: 60%;
+		height: 100vh;
+		padding: 1rem;
+		background-color: #fff;
+	}
+	.side_logo {
+		text-align: center;
+		width: 18.75rem;
+		margin: 0 auto;
+	}
+	.menu_side {
+		height: 100%;
+		margin-top: 5vw;
+
+		li {
+			border-top: 1px solid #bebebe;
+
+			&:first-child {
+				border-top: none;
+			}
+			a {
+				display: block;
+				padding: 4vw 10vw;
+				color: #fefefe;
+				font-size: 4vw;
+			}
+			&.active a {
+				color: #ff0000;
+			}
+			&.point_green a {
+				color: #159606;
+			}
+			span:before {
+				content: '-';
+				display: inline-block;
+				margin-right: 10px;
+				color: #fefefe;
+			}
+			&.active span:before {
+				color: #ff0000;
+			}
+			&.point_green span:before {
+				color: #159606;
+			}
+		}
+	}
+	.btn_close {
+		position: absolute;
+		top: 0;
+		left: 60%;
+		width: 30px;
+		height: 30px;
+		font-size: 30px;
+		color: #fff;
+
+		i {
+			color: inherit;
+			opacity: 1;
+		}
+	}
+}
+@keyframes backgroundColor {
+	0% {
+		background-color: rgba(0, 0, 0, 0);
+	}
+	100% {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+/*-----------------
+	main
+------------------*/
+.page_main {
+	.slider {
+		padding: 9vh 0 2vh;
+		touch-action: auto !important;
+		-ms-touch-action: pan-y;
+		touch-action: pan-y;
+
+		.slick-slide {
+			position: relative;
+
+			img {
+				width: 100%;
+				transform-origin: 50% 50%;
+				transform: scale(0.88);
+				transition: transform 0.5s linear;
+			}
+			.content {
+				position: absolute;
+				bottom: 4rem;
+				left: 2.5rem;
+				transition: transform 0.5s linear;
+
+				p {
+					color: #fff;
+				}
+				.main_txt {
+					font-size: 2.813rem; //45px
+					font-weight: bold;
+				}
+				.sub_txt {
+					font-size: 1.75rem; //28px
+					font-weight: light;
+				}
+			}
+			&.slick-center {
+				img {
+					transform: scale(1);
+					transition: transform 0.5s linear;
+				}
+
+				.content {
+					position: absolute;
+					bottom: 1.688rem; //27px
+					left: 1.063rem; //17px
+					transition: transform 0.5s linear;
+
+					.main_txt {
+						font-size: 2.813rem; //45px
+					}
+					.sub_txt {
+						font-size: 1.75rem; //28px
+					}
+				}
+			}
+		}
+		.slick-dots {
+			bottom: -15px;
+			li {
+				&.slick-active {
+					button:before {
+						content: '●';
+					}
+				}
+				button:before {
+					content: '○';
+					color: #a8a8a8 !important;
+					opacity: 1;
+					font-size: 0.563rem;
+				}
+			}
+		}
+	}
+}
+
+/*-----------------
+	mypage
+------------------*/
+.page_mypage {
+	.user_info {
+		text-align: center;
+		margin: 6rem 0 0; //145px
+
+		.thumbnail {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 17.938rem; //287px
+			height: 17.938rem; //287px
+			font-size: 12.5rem; //200px
+			margin: 0 auto;
+			border: 1px solid #bebebe;
+			border-radius: 50%;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			overflow: hidden;
+		}
+		.name {
+			margin: 2.75rem auto 0.875rem; //44px auto 14px
+			font-size: 3.125rem; //50px
+			font-weight: bold;
+		}
+		.email {
+			font-size: 1.5rem; //24px
+			font-size: 300;
+		}
+	}
+	.menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20% 10% 20%;
+
+		a {
+			text-align: center;
+			font-size: 1.625rem; //26px
+			color: #989898;
+		}
+		img {
+			width: 5.625rem; //90px
+			margin-bottom: 2px;
+		}
+	}
+}
+
+/*-----------------
+	subway
+------------------*/
+.page_subway {
+	.depth1 {
+		text-align: center;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+}
+
+/*-----------------
+	introduce
+------------------*/
+.page_sub {
+	.btn_back {
+		display: none;
+	}
+}
