@@ -23,11 +23,17 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mozjpeg": "^7.1.0",
+    "optipng-bin": "^7.0.0",
+    "pngquant-bin": "^6.0.0"
   },
   "browserslist": [
     "chrome > 0",
     "ie > 0",
     "firefox > 0"
-  ]
+  ],
+  "dependencies": {}
 }

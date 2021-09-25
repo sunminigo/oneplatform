@@ -104,7 +104,7 @@ gulp.task('library', () => {
 gulp.task('fonts', () => {
 	return new Promise((resolve) => {
 		gulp
-			.src(PATH.ASSETS.FONTS + '/*.*')
+			.src(PATH.ASSETS.FONTS + '/*.js')
 			.pipe(gulp.dest(DEST_PATH.ASSETS.FONTS));
 
 		resolve();
