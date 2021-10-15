@@ -26,7 +26,7 @@ slider = function () {
 			arrows: false,
 			adaptiveHeight: true,
 			centerMode: true,
-			centerPadding: '66px',
+			centerPadding: '10%',
 		})
 		.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 			if (currentSlide !== nextSlide) {
@@ -66,14 +66,10 @@ dropdown = function () {
 
 		if ($(this).hasClass('active')) {
 			depth2.addClass('active');
-			$(this)
-				.find('.btn_dropdown')
-				.attr('class', 'ph-caret-up-thin btn_dropdown');
+			$(this).find('.btn_dropdown').attr('class', 'ph-caret-up-thin btn_dropdown');
 		} else {
 			depth2.removeClass('active');
-			$(this)
-				.find('.btn_dropdown')
-				.attr('class', 'ph-caret-down-thin  btn_dropdown');
+			$(this).find('.btn_dropdown').attr('class', 'ph-caret-down-thin  btn_dropdown');
 		}
 	});
 };

@@ -126,6 +126,8 @@
 
 		.slick-slide {
 			position: relative;
+			touch-action: auto;
+			-ms-touch-action: auto;
 
 			img {
 				width: 100%;

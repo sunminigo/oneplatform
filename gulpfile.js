@@ -52,11 +52,11 @@ gulp.task('html-include', () => {
 gulp.task('scss:compile', () => {
 	return new Promise((resolve) => {
 		var options = {
-			outputStyle: 'compact', // nested, expanded, compact, compressed
+			outputStyle: 'expanded', // nested, expanded, compact, compressed
 			indentType: 'tab', // space, tab
-			indentWidth: 1,
+			indentWidth: 2,
 			precision: 3,
-			sourceComments: true, // 코멘트 제거 여부
+			sourceComments: false, // 코멘트 제거 여부
 		};
 
 		gulp
@@ -105,9 +105,7 @@ gulp.task('library', () => {
 
 gulp.task('fonts', () => {
 	return new Promise((resolve) => {
-		gulp
-			.src(PATH.ASSETS.FONTS + '/*.*')
-			.pipe(gulp.dest(DEST_PATH.ASSETS.FONTS));
+		gulp.src(PATH.ASSETS.FONTS + '/*.*').pipe(gulp.dest(DEST_PATH.ASSETS.FONTS));
 
 		resolve();
 	});
@@ -165,16 +163,6 @@ gulp.task('browserSync', () => {
 });
 
 // 호출 묶음
-const ALL_SERIES = gulp.series([
-	'clean',
-	'scss:compile',
-	'html-include',
-	'script:concat',
-	'fonts',
-	'library',
-	'nodemon:start',
-	'browserSync',
-	'watch',
-]);
+const ALL_SERIES = gulp.series(['clean', 'scss:compile', 'html-include', 'script:concat', 'fonts', 'library', 'nodemon:start', 'browserSync', 'watch']);
 
 gulp.task('default', ALL_SERIES);
