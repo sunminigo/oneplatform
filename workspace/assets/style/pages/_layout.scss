@@ -119,7 +119,9 @@
 ------------------*/
 .page_main {
 	.slider {
-		padding: 9vh 0 2vh;
+		padding: 3vh 0;
+		display: flex;
+		align-items: center;
 		touch-action: auto !important;
 		-ms-touch-action: pan-y;
 		touch-action: pan-y;
