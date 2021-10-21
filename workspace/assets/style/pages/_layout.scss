@@ -118,10 +118,21 @@
 	main
 ------------------*/
 .page_main {
-	.slider {
-		padding: 3vh 0;
+	height: 100%;
+
+	.container_wrap {
 		display: flex;
 		align-items: center;
+
+		@media (max-height: 568px) {
+			height: 100% !important;
+		}
+	}
+	.slide_box {
+		width: 100%;
+	}
+	.slider {
+		padding: 0 0 2vh;
 		touch-action: auto !important;
 		-ms-touch-action: pan-y;
 		touch-action: pan-y;

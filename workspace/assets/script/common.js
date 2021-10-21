@@ -3,7 +3,17 @@ $(function () {
 	slider();
 	dropdown();
 	tabBox();
+	$(window).resize(function () {
+		mainHeight();
+	});
 });
+
+mainHeight = function() {
+	var height = $('.header_wrap').height() + $('.navigation').height();
+	var bottomNaviHei = $('.navigation').height();
+
+	$('.page_main .container_wrap').css({'height':'calc(100% - '+ height +'px)'});
+};
 
 sideMenu = function () {
 	$('.btn_menu').click(function () {
@@ -18,8 +28,8 @@ slider = function () {
 	$('#visual_slider')
 		.slick({
 			lazyLoad: 'ondemand',
-			// autoplay: true,
-			// autoplaySpeed: 3000,
+			autoplay: true,
+			autoplaySpeed: 5000,
 			infinite: true,
 			dots: true,
 			draggable: true,
@@ -31,7 +41,6 @@ slider = function () {
 		.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 			if (currentSlide !== nextSlide) {
 				$('.slick-center + .slick-cloned').each(function (index, node) {
-					console.log(node);
 					var $node = $(node);
 
 					setTimeout(function () {
