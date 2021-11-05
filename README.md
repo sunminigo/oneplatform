@@ -11,3 +11,10 @@
 - [파트너] (https://sunminigo.github.io/oneplatform/dist/partner.html)
 - [인증사업장1] (https://sunminigo.github.io/oneplatform/dist/sub_workplace.html)
 - [인증사업장2] (https://sunminigo.github.io/oneplatform/dist/sub_workplace_2.html)
+
+
+## history
+
+### 21.11.05
+- dist/sub_workplace.html
+- dist/assets/style/style.css
