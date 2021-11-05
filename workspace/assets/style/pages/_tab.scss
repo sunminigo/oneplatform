@@ -34,10 +34,15 @@
 			padding: 0 1rem;
 		}
 		ul {
-			width: 100%;
+			width: 640px;
 			margin: 0 0 0 -10px;
+
+			@media screen and (max-width: 640px) {
+				width: 100%;
+			}
 		}
 		.item {
+			display: inline-block;
 			text-align: center;
 			display: inline-block;
 			width: calc((100% / 2) - 12px);
@@ -50,6 +55,13 @@
 				margin-bottom: 0.625rem; //10px
 				border-radius: 1rem;
 				overflow: hidden;
+
+				img {
+					object-fit: cover;
+				}
+			}
+			.title {
+				@include dot();
 			}
 		}
 	}
