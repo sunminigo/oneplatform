@@ -3,14 +3,13 @@ $(function () {
 	slider();
 	dropdown();
 	tabBox();
-	$(window).resize(function () {
-		mainHeight();
-	});
+	mainHeight();
+	popup();
 });
 
-mainHeight = function() {
-	var height = $('.header_wrap').height() + $('.navigation').height();
-	var bottomNaviHei = $('.navigation').height();
+mainHeight = function () {
+	var height = $('.header_wrap').height() + $('.navigation').outerHeight();
+	var bottomNaviHei = $('.navigation').outerHeight();
 
 	$('.page_main .container_wrap').css({'height':'calc(100% - '+ height +'px)'});
 };
@@ -82,3 +81,24 @@ dropdown = function () {
 		}
 	});
 };
+
+popup = function () {
+	// 팝업 열기
+	$(document).on("click", ".popup_open", function (e){
+		var target = $(this).attr("data-open");
+		$(target).addClass("active");
+	});
+
+	$(document).on("click", ".popup_close", function (e){
+		var target = $(this).parents("div.popup_wrap");
+		$(target).removeClass("active");
+	});
+
+	// 외부영역 클릭 시 팝업 닫기
+	$(document).mouseup(function (e){
+		var LayerPopup = $(".popup_wrap");
+		if(LayerPopup.has(e.target).length === 0){
+			LayerPopup.removeClass("active");
+		}
+	});
+}

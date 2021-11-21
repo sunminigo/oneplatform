@@ -1,0 +1,86 @@
+.page_popup {
+  padding: 25px;
+
+  .popup_open {
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #555;
+    color: #fff;
+  }
+}
+.popup_wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 100;
+  transition: display 0.3 ease-in-out;
+
+  &.active {
+    display: block;
+  }
+
+  &[class*="center"] {
+    .popup_box {
+      @include position-center();
+    }
+  }
+  .popup_box {
+    width: 100%;
+    max-width: 300px;
+    max-height: 90%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .popup_header {
+    position: relative;
+    padding: 1.563rem; //25px
+    font-size: 20px;
+    border-bottom: 1px solid #DADADA;
+
+    .title {
+      text-align: center;
+      font-size: inherit;
+    }
+    .popup_close {
+      @include position-translate(absolute, $t: 50%, $r: 0, $x: 0, $y: -50%);
+      padding: 1.563rem; //25px
+      font-size: inherit;
+    }
+  }
+  .popup_content {
+    padding: 1.563rem; //25px
+  }
+  .share_buttons {
+    text-align: center;
+    margin: -1.563rem 0 0 -1.563rem;
+
+    button {
+      width: 5rem;
+      margin: 1.563rem 0 0 1.563rem;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100%;
+      }
+    }
+    .sns_twitter:before {background-image: url('../images/logos/sns_twitter.png');}
+    .sns_facebook:before {background-image: url('../images/logos/sns_facebook.png');}
+    .sns_katalk:before {background-image: url('../images/logos/sns_katalk.png');}
+    .sns_band:before {background-image: url('../images/logos/sns_band.png');}
+    .sns_wechat:before {background-image: url('../images/logos/sns_wechat.png');}
+    .sns_msg:before {background-image: url('../images/logos/sns_msg.png');}
+    .sns_mail:before {background-image: url('../images/logos/sns_mail.png');}
+  }
+}

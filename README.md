@@ -1,4 +1,4 @@
-# oneplatform
+## page
 
 - [메인] (https://sunminigo.github.io/oneplatform/dist/index.html)
 - [마이페이지] (https://sunminigo.github.io/oneplatform/dist/mypage.html)
@@ -12,9 +12,15 @@
 - [인증사업장1] (https://sunminigo.github.io/oneplatform/dist/sub_workplace.html)
 - [인증사업장2] (https://sunminigo.github.io/oneplatform/dist/sub_workplace_2.html)
 
+- [팝업] (https://sunminigo.github.io/oneplatform/dist/popup.html)
 
+#
 ## history
 
-### 21.11.05
+> #### 21.11.21
+1. 팝업 추가
+- popup.html, css.style, common.js
+  
+> #### 21.11.05
 - dist/sub_workplace.html
 - dist/assets/style/style.css
