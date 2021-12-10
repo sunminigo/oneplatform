@@ -14,7 +14,7 @@
 
 - [팝업] (https://sunminigo.github.io/oneplatform/dist/popup.html)
 
-- [댓글] (https://sunminigo.github.io/oneplatform/dist/comment.html)
+- [댓글] (https://sunminigo.github.io/oneplatform/dist/comments.html)
 
 #
 ## history
