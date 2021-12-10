@@ -103,6 +103,9 @@
   .btn_more {
     text-align: right;
     margin-top: 0.938rem;//15px
-    font-size: 1.25rem;// 20px
+
+    button {
+      font-size: 1.25rem;// 20px
+    }
   }
 }
