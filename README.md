@@ -14,9 +14,15 @@
 
 - [팝업] (https://sunminigo.github.io/oneplatform/dist/popup.html)
 
+- [댓글] (https://sunminigo.github.io/oneplatform/dist/comment.html)
+
 #
 ## history
 
+> #### 21.12.10
+1. 댓글 레이아웃 추가
+- comment.html
+  
 > #### 21.11.21
 1. 팝업 추가
 - popup.html, css.style, common.js
