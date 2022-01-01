@@ -19,14 +19,18 @@
 #
 ## history
 
+> #### 22.01.01
+- 관리자 답글 영역 추가
+
+> #### 21.11.05
+- dist/sub_workplace.html
+- dist/assets/style/style.css
+
+> #### 21.11.21
+1. 팝업 추가
+- popup.html, css.style, common.js
+
 > #### 21.12.10
 1. 댓글 레이아웃 추가
 - comment.html
   
-> #### 21.11.21
-1. 팝업 추가
-- popup.html, css.style, common.js
-  
-> #### 21.11.05
-- dist/sub_workplace.html
-- dist/assets/style/style.css
