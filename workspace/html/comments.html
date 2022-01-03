@@ -1,6 +1,6 @@
 @@include('../include/head.html', { title: 'One Platform3' })
 <div class="wrapper">
-	<div class="container_wrap">
+  <div class="container_wrap">
     <!-- 댓글영역 -->
     <div class="comments_box">
       <p class="total">댓글 214</p>
@@ -33,7 +33,7 @@
             <button type="button" class="btn_comment">관리자 답글</button>
           </div>
 
-          <div class="comment_write active">
+          <div id="admin_comment_box" class="comment_write">
             <p class="user_id">userid</p>
             <textarea name="" id="" placeholder="답글을 입력해주세요"></textarea>
             <div class="comment_write__bottom">
@@ -64,8 +64,11 @@
           isDropdown.addClass('fade');
         }
       });
+      $('.btn_comment').click(function() {
+        $('#admin_comment_box').addClass('active');
+      });
     </script>
     <!-- // 댓글영역 -->
-	</div>
+  </div>
 </div>
 @@include('../include/footer.html')
