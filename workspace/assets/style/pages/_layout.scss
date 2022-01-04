@@ -240,16 +240,19 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 		padding: 20% 10% 20%;
 
 		a {
 			text-align: center;
+			flex: 0 0 25%;
+			margin-bottom: 6%;
 			font-size: 1.625rem; //26px
 			color: #989898;
 		}
 		img {
 			width: 5.625rem; //90px
-			margin-bottom: 2px;
+			margin-bottom: 8px;
 		}
 	}
 }
