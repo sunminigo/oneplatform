@@ -11,13 +11,14 @@
 - [파트너] (https://sunminigo.github.io/oneplatform/dist/partner.html)
 - [인증사업장1] (https://sunminigo.github.io/oneplatform/dist/sub_workplace.html)
 - [인증사업장2] (https://sunminigo.github.io/oneplatform/dist/sub_workplace_2.html)
-
 - [팝업] (https://sunminigo.github.io/oneplatform/dist/popup.html)
-
 - [댓글] (https://sunminigo.github.io/oneplatform/dist/comments.html)
+- [로그인] (https://sunminigo.github.io/oneplatform/dist/login.html)
 
 #
 ## history
+> 22.01.07
+- 로그인 페이지 추가
 
 > #### 22.01.04
 - 관리자 답글 삭제 추가

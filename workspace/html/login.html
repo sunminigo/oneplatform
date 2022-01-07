@@ -1,0 +1,20 @@
+@@include('../include/head.html', { title: 'LOGIN' })
+<div class="wrapper page_login">
+    <div class="container_wrap">
+        <h1>LogIn</h1>
+        <div class="form_box">
+            <input type="text" id="userId" class="user_id" placeholder="아이디"/>
+            <input type="password" id="userPw" class="user_pw" placeholder="비밀번호"/>
+        </div>
+        <input type="checkbox" class="checkbox" id="chk_login"/><label for="chk_login">자동로그인</label>
+
+        <button type="submit" class="btn_login">로그인</button>
+
+        <div class="find_box">
+            <span><a href="">아이디 찾기</a></span>
+            <span><a href="">비밀번호 재설정</a></span>
+            <span><a href="">회원가입</a></span>
+        </div>
+    </div>
+</div>
+@@include('../include/footer.html')
