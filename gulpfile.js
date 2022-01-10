@@ -13,7 +13,6 @@ const gulp = require('gulp'),
 const PATH = {
 		HTML: './workspace/html',
 		ASSETS: {
-			FONTS: './workspace/assets/fonts',
 			IMAGES: './workspace/assets/images',
 			STYLE: './workspace/assets/style',
 			SCRIPT: './workspace/assets/script',
@@ -24,7 +23,6 @@ const PATH = {
 	DEST_PATH = {
 		HTML: './dist',
 		ASSETS: {
-			FONTS: './dist/assets/fonts',
 			IMAGES: './dist/assets/images',
 			STYLE: './dist/assets/style',
 			SCRIPT: './dist/assets/script',
@@ -103,14 +101,6 @@ gulp.task('library', () => {
 	});
 });
 
-gulp.task('fonts', () => {
-	return new Promise((resolve) => {
-		gulp.src(PATH.ASSETS.FONTS + '/*.*').pipe(gulp.dest(DEST_PATH.ASSETS.FONTS));
-
-		resolve();
-	});
-});
-
 gulp.task('imagemin', () => {
 	return new Promise((resolve) => {
 		gulp
@@ -163,6 +153,6 @@ gulp.task('browserSync', () => {
 });
 
 // 호출 묶음
-const ALL_SERIES = gulp.series(['clean', 'scss:compile', 'html-include', 'script:concat', 'fonts', 'library', 'nodemon:start', 'browserSync', 'watch']);
+const ALL_SERIES = gulp.series(['clean', 'scss:compile', 'html-include', 'script:concat', 'library', 'nodemon:start', 'browserSync', 'watch']);
 
 gulp.task('default', ALL_SERIES);
